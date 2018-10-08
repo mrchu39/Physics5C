@@ -8,7 +8,7 @@ height /= 10
 
 m = get_m(height, ang, False)
 b = get_b(height, ang, False)
-delta_y = np.array(len(ang)*[get_delta_y(height, ang, False)])
+delta_y = np.array(len(ang)*[get_delta_y(height, ang)])
 delta_m = get_delta_m(height, ang, 1/delta_y)
 delta_b = get_delta_b(height, ang, 1/delta_y)
 
