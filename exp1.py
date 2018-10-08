@@ -15,17 +15,17 @@ m_unw = get_m(x,I,False)
 delta_m_unw = get_delta_m(x,I,False)
 b_unw = get_b(x,I,False)
 delta_b_unw = get_delta_b(x,I,False)
-delta_I_unw = get_delta_y(x,I,False)
-chi_sq_unw = chi_sq(x,I,False)
+delta_I_unw = get_delta_y(x,I)
+chi_sq_unw = chi_sq(x,I)
 
 # Weighted stats.
-delta_I_w = get_delta_y(x,I,True,delta_x)
+delta_I_w = get_delta_y(x,I,delta_x)
 w = 1/delta_I_w
 m_w = get_m(x,I,w)
 delta_m_w = get_delta_m(x,I,w)
 b_w = get_b(x,I,w)
 delta_b_w = get_delta_b(x,I,w)
-chi_sq_w = chi_sq(x,I,True,delta_x)
+chi_sq_w = chi_sq(x,I,delta_x)
 
 print "UNWEIGHTED LEAST SQUARES REGRESSION"
 print "I_0 =", m_unw, "+-", delta_m_unw
